@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+
+    <!-- i have to include the css instead of the following link stylesheet -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* the above is the api that i have used to set the css property and save the time. */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Spartan',sans-serif;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color:#222;
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color:#222;
+}
+
+h4{
+    font-size: 20px;
+    color:#222;
+}
+
+h6{
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p{
+    font-size:16px;
+    color:#465b52;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1{
+    padding:40px 80px;
+}
+
+.section-m1{
+    margin:40px 0;
+}
+body{
+    width:100%;
+    /* background-size: contain; */
+}
+.nav-bar{
+    background-color: #7d1b1b;
+    color:white;
+    font-size: larger;
+}
+
+.nav-bar ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+    font-weight: 700;
+    padding:20px;
+}
+
+
+.nav-bar li a{
+    text-decoration: none;
+    padding: 12px;
+    color: white;
+}
+
+.nav-bar li :hover{
+    border: 3px solid white;
+    border-radius: 20px;
+}
+
+/*Header start  */
+
+#header{        
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 80px;
+    /* background-color: #E3E6F3; */
+    background-color: #FEC200;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    z-index: 999;
+    position:sticky;
+    top: 0;
+    left:0;
+}
+
+#header input{
+    display: none;
+    margin:10px;
+    border:none;
+    height:40px;
+    border-radius: 10px;
+    text-align: center; 
+    width: 400px;
+}
+
+.dropdown {
+    margin: 20px;
+    position: relative;
+    display: none;
+}
+
+.dropdown .dropdown-content{
+    display:none;
+    position:absolute;
+    background:#f9f9f9;
+    /* text-decoration: none; */
+    font-size: larger;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.02);
+    padding: 12px 16px;
+    z-index: 30;
+    
+}
+
+.dropdown .dropdown-content a{
+    text-decoration: none;
+    width: 100%;
+    color: black;
+}
+.dropdown .dropdown-content a:hover{
+    background-color: #746b6b;
+}
+
+#header img{
+    width:60px;
+    height: 60px;
+    border-radius: 3rem;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li{
+    list-style: none;
+    position: relative;
+    padding:0 20px;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease-in-out ;
+}
+
+
+#navbar li a:hover{
+    color: #088178;
+}
+
+#navbar li a:hover,
+#navbar li a.active{
+    color:#088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width:30%;
+    height:2px;
+    background: #088178;
+    position: absolute;
+    bottom:-4px;
+    left:20px;
+}
+
+/* Home page */
+
+#hero{
+    background-image: url(/img/background/hero3.jpg);
+    height: 90vh;
+    width:100%;
+    background-size:cover;
+    /* background-repeat: no-repeat; */
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-self:center;
+}
+
+#hero h4{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#hero h1{
+    color:#088178;
+}
+
+#hero button {
+    background-image: url(img/background/button.png);
+    background-color:transparent;
+    color:#088178;
+    border: 1px solid ;
+    border-radius: 25px;
+    padding:14px 80px 14px 65px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+
+}
+
+#features {
+    display:flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#features .fe-box{
+    width:180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+    border: 1px solid #cce7d0;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+
+#features .fe-box:hover{
+    box-shadow: 10px 10px 54px rgb(70, 62, 221, 0.1);
+}
+
+#features .fe-box h6{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #088178;
+    background-color: #fddde4;
+}
+
+#features .fe-box img{
+    width:100%;
+    margin-bottom: 10px;
+}
+
+#features .fe-box:nth-child(2) h6{
+    background-color: #cce7d0;
+}
+#features .fe-box:nth-child(3) h6{
+    background-color: #d1e8f2;
+}
+#features .fe-box:nth-child(4) h6{
+    background-color: #cdd4f8;
+}
+#features .fe-box:nth-child(5) h6{
+    background-color: #f7dbf6;
+}
+#features .fe-box:nth-child(6) h6{
+    background-color: #fff2e5;
+}
+
+
+/*  Featured products */
+
+#product1{
+    text-align: center;
+}
+
+#product1 .pro{
+    width: 40%;
+    margin-bottom: 20px;
+    max-width: 450px;
+    min-width: 300px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor:pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+    position: relative;
+}
+
+#product1 .pro img{
+    width: 100%;
+    border-radius: 1rem;
+}
+
+#product1 .pro:hover{
+    box-shadow: 20px 20px 30px rgb(70, 62, 221, 0.1);
+}
+
+.pro-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#product1 .pro .des {
+    text-align: start;
+    padding:10px 0;
+}
+
+#product1 .pro .cart {
+    color:rgb(17, 132, 74);
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #cce7d0;
+    position:absolute;
+    bottom: 20px;
+    right:10px;
+}
+.star {
+    color:#FEC200;
+}
+
+
+/* FASHION */
+#fashion-section {
+    background-color:#f9f9f9;
+}
+
+h2{
+    text-align: center;
+    margin-bottom : 20px;
+}
+
+.scroll {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    overflow-y: scroll;
+    height:auto;
+    width:100%;
+}
+
+.scroll img{
+    /* width: inherit; */
+    height: 150px;
+    padding:10px;
+    border-radius: 30px;
+}
+.scroll img:hover{
+    box-shadow: 20px 20px 34px rgba(0,0,0,0.06);
+}
+
+#banner img {
+    display:block;
+    width: 100%;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#women img{
+    cursor: pointer;
+    margin:15px;
+    padding:10px;
+    height:290px;
+    border-radius: 20px;
+}
+
+#women img:hover{
+    box-shadow: 20px 20px 34px rgb(70, 62, 221, 0.1);
+}
+
+#women .category-women{
+    display:flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* flex-wrap: wrap; */
+    overflow-y:scroll;
+}
+
+
+#electronics-section img{
+    display:block;
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius:20px;   
+}
+
+#electronics-section img:hover{
+    box-shadow: 20px 20px 34px rgb(70, 62, 221, 0.3);
+}
+
+.electronics-guide {
+    margin:20px;
+    display: flex;
+    flex-direction: row;
+    overflow-y:scroll;
+    
+}
+
+.ELS-products{
+    margin:20px;
+    margin-top:50px;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.card img{
+    width:100%;
+    height: 100%;
+}
+
+
+.card {
+    margin: 20px;
+    position: relative;
+    width: 11.875em;
+    height: 16.5em;
+    box-shadow: 0px 1px 13px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 120ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 0.5em;
+    padding-bottom: 3.4em;
+  }
+  
+  .card::after {
+    content: "Add to Cart";
+    padding-top: 1.25em;
+    padding-left: 1.25em;
+    position: absolute;
+    left: 0;
+    bottom: -60px;
+    background: #00AC7C;
+    color: #fff;
+    height: 2.5em;
+    width: 90%;
+    transition: all 80ms;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0;
+  }
+  
+  .card .title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    position: absolute;
+    left: 0.625em;
+    bottom: 1.875em;
+    font-weight: 400;
+    color: #000;
+  }
+  
+  .card .price {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 0.9em;
+    position: absolute;
+    left: 0.625em;
+    bottom: 0.625em;
+    color: #000;
+  }
+  
+  .card:hover::after {
+    bottom: 0;
+    opacity: 1;
+  }
+  
+  .card:active {
+    transform: scale(0.98);
+  }
+  
+  .card:active::after {
+    content: "Added !";
+    height: 3.125em;
+  }
+  
+  .text {
+    max-width: 55px;
+  }
+  
+  .image {
+    background: rgb(241, 241, 241);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  /* mobiles section  */
+  #mobiles-section{
+    background-color: #cce7d0;
+  }
+
+  #mobiles-section > img {
+    display:block;
+    height: 30vw;
+    border-radius: 30px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 5);
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .brands {
+    display:flex;
+    overflow-y: scroll;
+  }
+
+  .brands img{
+    height:200px;
+    margin:20px;
+    border-radius :20px;
+  }
+
+  .brands img:hover {
+    box-shadow: 20px 20px 30px rgb(70, 62, 221, 0.3)
+  }
+
+  .M-product-container{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .M-product-container .mob-1 {
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    margin: 20px;
+    text-align: center;
+    border-radius: 20px;
+  }
+  .M-product-container .mob-1 > img {
+    width:80%;
+    height: 70%;
+  }
+
+  .M-product-container .mob-1:hover{
+    box-shadow: 20px 20px 32px rgb(70, 62, 221, 0.3);
+  }
+
+  .M-product-container i{
+    color:#FEC200
+  }
+
+  .icon i {
+    color:black;
+  }
+
+  footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  footer .col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .col #logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+
+  footer .row {
+    display:flex;
+    flex-direction: row;
+  }
+
+  
+ 
+@media screen and (max-width: 900px){
+    .nav-bar{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 620px){
+
+    .dropdown:hover .dropdown-content{
+        display: flex;       
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 30px;
+        font-weight: 700;
+        color:black;
+    }
+    
+    
+    
+
+    #hero {
+        background-image: url(img/background/hero4.png);
+        background-size: cover;
+        background-position: none
+    }
+
+    #inner-container ul{
+        display: none;
+    }
+    #header input{
+        float:none;
+        display:block;
+        text-align: left;
+        width:100%;
+        margin:10px;
+        padding: 14px;
+    }
+
+    .dropdown{
+        display: block;
+        font-size: larger;
+    }
+
+}
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="header">
+        <a href="#"> <img src="img/logo/site-logo1.jpg" class="logo" alt=""></a>
+            <i class="fa fa-solid fa-bars dropdown">
+                <div class="dropdown-content">
+                
+                    <a href="#">Home</a>
+                    <a href="#">Blog</a>
+                    <a href="#features">About</a>
+                    <a href="#features">Best Seller</a>
+                    <a href="#mobiles-section">Mobiles</a>
+                    <a href="#electronics-section">Electronics</a>
+                    <a href="#fashion-section">Fashion</a>
+                    <a href="#contact-section">Contact Us</a>
+                    
+            </div>
+            </i>
+            
+
+        <input type="text" placeholder="Search"> 
+
+        <div id="inner-container">
+
+            <ul id="navbar">
+                
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#product1">Shop</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#features">About</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+                <li><a href="#"> <i class="fa fa-shopping-cart"></i></a></li>
+                
+            </ul>
+
+            
+        </div>
+        
+    </section>
+
+    <section class="nav-bar">
+        <ul id="navbar ">
+            <li><a class="active" href="#product1">Best Seller</a></li>
+            <li><a href="#product1">Today's Deals</a></li>
+            <li><a href="#mobiles-section">Mobiles</a></li>
+            <li><a href="#electronics-section">Electronics</a></li>
+            <li><a href="#fashion-section">Fashion</a></li>
+            <li><a href="#contact-section">Customer Service</a></li>
+        </ul>
+    </section>
+
+    <section id="hero">
+        <h4>Trade-in-Offer</h4>
+        <h2>Super Value Deals</h2>
+
+        <h1>On All Products</h1>
+        <p>Save more with coupons & 70% off!</p>
+        <button>Shop Now</button>
+    </section>
+
+    <h2 style="margin-top: 40px;">Features</h2>
+    <section id="features" class="section-p1">
+        <div class="fe-box">
+            <img src="img/features/f1.png" alt="">
+            <h6>Free Shipping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f2.png" alt="">
+            <h6>Online Order</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f3.png" alt="">
+            <h6>Save Money</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f4.png" alt="">
+            <h6>Promotions</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f5.png" alt="">
+            <h6>Happy Sell</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f6.png" alt="">
+            <h6>F24/7 Support</h6>
+        </div>
+        
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>Featured Products</h2>
+        <p>Summer Collection New Mordern Design</p>
+
+        <div class="pro-container">
+            <div class="pro">
+                <img src="img/featured-products/f1.jpg" alt="">
+                <div class="des">
+                    <span>Adidas</span>
+                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <div class="star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <h4>78$</h4>
+                </div>
+                <a href="#"> <i class="fa fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="img/featured-products/f2.jpg" alt="">
+                <div class="des">
+                    <span>Adidas</span>
+                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <div class="star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <h4>78$</h4>
+                </div>
+                <a href="#"> <i class="fa fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="img/featured-products/f3.jpg" alt="">
+                <div class="des">
+                    <span>Adidas</span>
+                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <div class="star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <h4>78$</h4>
+                </div>
+                <a href="#"> <i class="fa fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="img/featured-products/f4.jpg" alt="">
+                <div class="des">
+                    <span>Adidas</span>
+                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <div class="star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <h4>78$</h4>
+                </div>
+                <a href="#"> <i class="fa fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="img/featured-products/f1.jpg" alt="">
+                <div class="des">
+                    <span>Adidas</span>
+                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <div class="star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <h4>78$</h4>
+                </div>
+                <a href="#"> <i class="fa fa-shopping-cart cart"></i></a>
+            </div><div class="pro">
+                <img src="img/featured-products/f1.jpg" alt="">
+                <div class="des">
+                    <span>Adidas</span>
+                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <div class="star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <h4>78$</h4>
+                </div>
+                <a href="#"> <i class="fa fa-shopping-cart cart"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="fashion-section" class="section-p1">
+        <h2>Trendy Fashion</h2>
+
+        <div class="scroll">
+            <div id="cat1">
+                <img src="img/fashion-cat/f1.png" alt="">
+                <h3>Men's</h3>
+            </div>
+            <div id="cat2">
+                <img src="img/fashion-cat/f2.png" alt="">
+                <h3>Women's</h3>
+            </div>
+            <div id="cat3">
+                <img src="img/fashion-cat/f3.png" alt="">
+                <h3>Footwear</h3>
+            </div>
+            <div id="cat4">
+                <img src="img/fashion-cat/f4.png" alt="">
+                <h3>Jewellery</h3>
+            </div>
+            <div id="cat5">
+                <img src="img/fashion-cat/f5.png" alt="">
+                <h3>Watches</h3>
+            </div>
+            <div id="cat6">
+                <img src="img/fashion-cat/f6.png" alt="">
+                <h3>luggage & bags</h3>
+            </div>
+            <div id="cat7">
+                <img src="img/fashion-cat/f7.png" alt="">
+                <h3>Men's</h3>
+            </div>
+            <div id="cat8">
+                <img src="img/fashion-cat/f8.png" alt="">
+                <h3>Beauty</h3>
+            </div>
+            <div id="cat9">
+                <img src="img/fashion-cat/f9.png" alt="">
+                <h3>Beauty</h3>
+            </div>
+            <div id="cat10">
+                <img src="img/fashion-cat/f10.png" alt="">
+                <h3>Beauty</h3>
+            </div>
+            <div id="cat11">
+                <img src="img/fashion-cat/f11.png" alt="">
+                <h3>Beauty</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="banner">
+        <img src="img/Banner/b1.gif" style="cursor: pointer;" alt="">
+        <div style="height:40px;"></div>
+        <img src="img/Banner/b2.png" style="cursor: pointer;" alt="">
+        <div style="height:40px;"></div>
+        <h2 id="hello-women">Women's Fashion</h2>
+        <img id="w3" src="img/Banner/b3.gif" style="width: 66%;" alt="">
+    </section>
+
+    <section id="women">
+        <div class="category-women">
+            <div class="women-container">
+                <img src="img/women-section/w1.png" alt="">
+            </div>
+            <div class="women-container">
+                <img src="img/women-section/w2.png" alt="">
+            </div>
+            <div class="women-container">
+                <img src="img/women-section/w3.png" alt="">
+            </div>
+            <div class="women-container">
+                <img src="img/women-section/w4.png" alt="">
+            </div>
+            <div class="women-container">
+                <img src="img/women-section/w5.png" alt="">
+            </div>
+            <div class="women-container">
+                <img src="img/women-section/w6.png" alt="">
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="electronics-section">
+        <h2>Electronics</h2>
+        <div class="banner-section">
+            <img src="img/Banner/b4.gif" alt="">
+        </div>
+
+        <h3 style="text-align: center; margin-top:20px;">The Electronics buying guides</h3>
+
+        <div class="electronics-guide">
+            
+
+            <div id="con-1">
+                <img src="img/electronics/e1.jpg" alt="">
+                <h3 style="text-align:center;">laptops</h3>
+            </div>
+            <div id="con-1">
+                <img src="img/electronics/e2.jpg" alt="">
+                <h3 style="text-align:center;">Watches</h3>
+            </div>
+            <div id="con-1">
+                <img src="img/electronics/e3.jpg" alt="">
+                <h3 style="text-align:center;">Printers</h3>
+            </div>
+            <div id="con-1">
+                <img src="img/electronics/e4.jpg" alt="">
+                <h3 style="text-align:center;">Monitors</h3>
+            </div>
+            <div id="con-1">
+                <img src="img/electronics/e5.jpg" alt="">
+                <h3 style="text-align:center;">Routers</h3>
+            </div>
+            <div id="con-1">
+                <img src="img/electronics/e6.jpg" alt="">
+                <h3 style="text-align:center;">Internal SSD & RAM</h3>
+            </div>
+        </div>
+
+        <h2>Products</h2>
+        <div class="ELS-products">
+            
+            <div class="card">
+                <div class="image">
+                    <img src="img/electronics/j1.jpg" alt="">
+                </div>
+                <span class="title">Electronic Product</span>
+                <span class="price">$100</span>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="img/electronics/j2.jpg" alt="">
+
+                </div>
+                <span class="title">Electronic Product</span>
+                <span class="price">$100</span>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="img/electronics/j3.jpg" alt="">
+
+                </div>
+                <span class="title">Electronic Product</span>
+                <span class="price">$100</span>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="img/electronics/j4.jpg" alt="">
+
+                </div>
+                <span class="title">Electronic Product</span>
+                <span class="price">$100</span>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="img/electronics/j5.jpg" alt="">
+
+                </div>
+                <span class="title">Electronic Product</span>
+                <span class="price">$100</span>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="img/electronics/j6.jpg" style="height:200px;" alt="">
+
+                </div>
+                <span class="title">Electronic Produce</span>
+                <span class="price">$100</span>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="img/electronics/j7.jpg" style="height:200px;" alt="">
+
+                </div>
+                <span class="title">Electronic Product</span>
+                <span class="price">$100</span>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="img/electronics/j8.jpg" alt="">
+
+                </div>
+                <span class="title">Electronic Product</span>
+                <span class="price">$100</span>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="img/electronics/j9.jpg" alt="">
+
+                </div>
+                <span class="title">Electronic Product</span>
+                <span class="price">$100</span>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="mobiles-section">
+        <h2 style="padding-top:30px;">Mobiles</h2>
+        <img src="img/mobiles/b1.gif" alt="">
+
+        <h3 style="text-align: center;margin-top:30px;"> Brands On Focus </h3>
+
+        <div class="brands">
+           
+            <div class="b1">
+                <img src="img/mobiles/m1.jpg" alt="">
+                <h3 style="text-align: center;">Shop Now</h3>
+            </div>
+            <div class="b1">
+                <img src="img/mobiles/m2.jpg" alt="">
+                <h3 style="text-align: center;">Shop Now</h3>
+            </div>
+            <div class="b1">
+                <img src="img/mobiles/m3.jpg" alt="">
+                <h3 style="text-align: center;">Shop Now</h3>
+            </div>
+            <div class="b1">
+                <img src="img/mobiles/m4.jpg" alt="">
+                <h3 style="text-align: center;">Shop Now</h3>
+            </div>
+            <div class="b1">
+                <img src="img/mobiles/5.jpg" alt="">
+                <h3 style="text-align: center;">Shop Now</h3>
+            </div>
+            <div class="b1">
+                <img src="img/mobiles/m6.jpg" alt="">
+                <h3 style="text-align: center;">Shop Now</h3>
+            </div>
+            <div class="b1">
+                <img src="img/mobiles/m7.png" alt="">
+                <h3 style="text-align: center;">Shop Now</h3>
+            </div>
+            <div class="b1">
+                <img src="img/mobiles/m8.jpg" alt="">
+                <h3 style="text-align: center;">Shop Now</h3>
+            </div>
+            <div class="b1">
+                <img src="img/mobiles/m9.jpg" alt="">
+                <h3 style="text-align: center;">Shop Now</h3>
+            </div>
+            <div class="b1">
+                <img src="img/mobiles/m10.jpg" alt="">
+                <h3 style="text-align: center;">Shop Now</h3>
+            </div>
+            <div class="b1">
+                <img src="img/mobiles/m11.png" alt="">
+                <h3 style="text-align: center;">Shop Now</h3>
+            </div>
+            <div class="b1">
+                <img src="img/mobiles/m12.png" alt="">
+                <h3 style="text-align: center;">Shop Now</h3>
+            </div>
+        </div>
+
+        <div class="mobile-products">
+            <h2 style="padding-top:30px;">Top Mobiles</h2>
+
+            <div class="M-product-container">
+                <div class="mob-1">
+                    <img src="img/mobiles/p1.webp" alt="">
+                    <h3>Sampung galaxy</h3>
+                    <h5>Branded Phone</h5>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <h3>800$</h3>
+                </div>
+                <div class="mob-1">
+                    <img src="img/mobiles/p5.webp" alt="">
+                    <h3>Sampung galaxy</h3>
+                    <h5>Branded Phone</h5>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <h3>800$</h3>
+                </div>
+                <div class="mob-1">
+                    <img src="img/mobiles/p3.webp" alt="">
+                    <h3>Sampung galaxy</h3>
+                    <h5>Branded Phone</h5>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <h3>800$</h3>
+                </div>
+                <div class="mob-1">
+                    <img src="img/mobiles/p4.webp" alt="">
+                    <h3>Sampung galaxy</h3>
+                    <h5>Branded Phone</h5>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <h3>800$</h3>
+                </div>
+                <div class="mob-1">
+                    <img src="img/mobiles/p5.webp" alt="">
+                    <h3>Sampung galaxy</h3>
+                    <h5>Branded Phone</h5>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <h3>800$</h3>
+                </div>
+                <div class="mob-1">
+                    <img src="img/mobiles/p1.webp" alt="">
+                    <h3>Sampung galaxy</h3>
+                    <h5>Branded Phone</h5>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <h3>800$</h3>
+                </div>
+                <div class="mob-1">
+                    <img src="img/mobiles/p4.webp" alt="">
+                    <h3>Sampung galaxy</h3>
+                    <h5>Branded Phone</h5>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <h3>800$</h3>
+                </div>
+                <div class="mob-1">
+                    <img src="img/mobiles/p3.webp" alt="">
+                    <h3>Sampung galaxy</h3>
+                    <h5>Branded Phone</h5>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <h3>800$</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="contact-section" class="section-p1">
+        <div class="col">
+            <img id="logo" src="img/logo/site-logo1.jpg" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 562 Wellington Road, Street 32, San Francisco</p>
+            <p><strong>Phone: </strong> 999090909</p>
+            <p><strong>Hours: </strong> 10:00 - 18:00, Mon - Sat</p>
+
+            
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My  Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App store on Google Play</p>
+            <div class="row">
+                <img src="img/getItlogo.jpeg" alt="">
+            </div>
+
+            <p>Secure payment Gateways</p>
+            <img src="img/payment.jpeg" alt="">
+        </div>
+
+        <div class="copyright">
+            <p>2023, Rishi Vijay Kumar Khandagle, PHN project task 3.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
